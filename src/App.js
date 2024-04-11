@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 import axios from 'axios';
 import Signup from './pages/SignUp';
 
-axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.baseURL = 'https://ridexserver.onrender.com';
 axios.defaults.withCredentials = true;
 
 function App() {
