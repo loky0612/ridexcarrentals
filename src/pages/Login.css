@@ -1,0 +1,7 @@
+.login {
+    background: var(--gradient);
+    border: 1px solid var(--white);
+    box-shadow: var(--shadow-1);
+    border-radius: var(--radius-18);
+    font-family: var(--ff-nunito);
+  }
