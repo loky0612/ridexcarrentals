@@ -47,8 +47,8 @@ const Home = () => {
             car: car,
             carName: carName,
             email: email,
-            name : name,
-            aadhar : aadhar
+            name: name,
+            aadhar: aadhar
         });
 
         const updatedUserData = { ...userData, [car]: 'verify' };
@@ -108,7 +108,7 @@ const Home = () => {
     function getRandomNumber(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    
+
     function padNumber(num) {
         return num.toString().padStart(2, '0');
     }
@@ -116,18 +116,18 @@ const Home = () => {
     function randomDateISOString() {
         const year = getRandomNumber(2020, 2024);
         const month = getRandomNumber(1, 12);
-        const day = getRandomNumber(1, 28); 
+        const day = getRandomNumber(1, 28);
         return `${year}-${padNumber(month)}-${padNumber(day)}`;
     }
-    
+
     function randomDateString() {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         const year = getRandomNumber(2000, 2025);
         const month = months[getRandomNumber(0, 11)];
-        const day = getRandomNumber(1, 28); 
+        const day = getRandomNumber(1, 28);
         return `${month} ${padNumber(day)}, ${year}`;
     }
-    
+
 
     return (
         <div style={{ fontFamily: 'Nunito', fontWeight: 400 }}>
@@ -298,7 +298,7 @@ const Home = () => {
                                                             ) : car1stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("toyota","Toyota RAV4 2021")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("toyota", "Toyota RAV4 2021")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -371,7 +371,7 @@ const Home = () => {
                                                             ) : car2stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("bmw3","BMW 3 Series 2019")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("bmw3", "BMW 3 Series 2019")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -445,7 +445,7 @@ const Home = () => {
                                                             ) : car3stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("volks","Volkswagen T-Cross")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("volks", "Volkswagen T-Cross")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -518,7 +518,7 @@ const Home = () => {
                                                             ) : car4stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("cadillac","Cadillac Escalade")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("cadillac", "Cadillac Escalade")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -591,7 +591,7 @@ const Home = () => {
                                                             ) : car5stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("bmwgti","BMW 4 Series GTI")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("bmwgti", "BMW 4 Series GTI")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -664,7 +664,7 @@ const Home = () => {
                                                             ) : car6stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("bmw4","BMW 4 Series")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("bmw4", "BMW 4 Series")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -737,7 +737,7 @@ const Home = () => {
                                                             ) : car7stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("benz","Benz GLA")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("benz", "Benz GLA")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -810,7 +810,7 @@ const Home = () => {
                                                             ) : car8stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("suzuki","Suzuki Baleno")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("suzuki", "Suzuki Baleno")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -883,7 +883,7 @@ const Home = () => {
                                                             ) : car9stat == "complete" ? (
                                                                 <button className="btn">Rented</button>
                                                             ) : (
-                                                                <button className="btn" onClick={() => handleRent("jaguar","Jaguar F-Pace")}>Rent now</button>
+                                                                <button className="btn" onClick={() => handleRent("jaguar", "Jaguar F-Pace")}>Rent now</button>
                                                             )
                                                         }
                                                     </div>
@@ -966,58 +966,380 @@ const Home = () => {
 
                     {/* Reviews */}
                     {
-    review &&
-    <section className="section blog" >
-        <div className="container">
-            <h2 className="h2 section-title">Reviews for {review}</h2>
-            <ul className="blog-list has-scrollbar">
-                {[1, 2, 3, 4, 5].map((index) => (
-                    <li key={index}>
-                        <div className="blog-card">
-                            <figure className="card-banner">
-                                <a href="#">
-                                    <img
-                                        src={review === "Toyota RAV4 2021" ? car1 :
-                                            review === "BMW 3 Series 2019" ? car2 :
-                                                review === "Volkswagen T-Cross" ? car3 :
-                                                    review === "Cadillac Escalade" ? car4 :
-                                                        review === "BMW 4 Series GTI" ? car5 :
-                                                            review === "BMW 4 Series" ? car6 :
-                                                                review === "Benz GLA" ? car7 :
-                                                                    review === "Suzuki Baleno" ? car8 :
-                                                                        review === "Jaguar F-Pace" ? car9 : ""
-                                        }
-                                        alt="Opening of new offices of the company"
-                                        loading="lazy"
-                                        className="w-100"
-                                    />
-                                </a>
-                                <a href="#" className="btn card-badge">
-                                    {Math.floor(Math.random() * (5 - 2 + 1)) + 2} Stars
-                                </a>
-                            </figure>
-                            <div className="card-content">
-                                <h3 className="h3 card-title">
-                                    <a href="#">{randomReviews[index - 1]}</a>
-                                </h3>
-                                <div className="card-meta">
-                                    <div className="publish-date">
-                                        <i className="bi bi-calendar"></i>
-                                        <time dateTime="2022-01-14">{randomDateString()}</time>
-                                    </div>
-                                    <div className="comments">
-                                        <i className="bi bi-chat-dots"></i>
-                                        <data value={114}>{Math.floor(Math.random() * (300 - 100 + 1)) + 2}</data>
-                                    </div>
-                                </div>
+                        review &&
+                        <section className="section blog" >
+                            <div className="container">
+                                <h2 className="h2 section-title">Reviews for {review}</h2>
+                                <ul className="blog-list has-scrollbar">
+                                    {[1, 2, 3, 4, 5].map((index) => (
+                                        <li key={index}>
+                                            <div className="blog-card">
+                                                <figure className="card-banner">
+                                                    <a href="#">
+                                                        <img
+                                                            src={review === "Toyota RAV4 2021" ? car1 :
+                                                                review === "BMW 3 Series 2019" ? car2 :
+                                                                    review === "Volkswagen T-Cross" ? car3 :
+                                                                        review === "Cadillac Escalade" ? car4 :
+                                                                            review === "BMW 4 Series GTI" ? car5 :
+                                                                                review === "BMW 4 Series" ? car6 :
+                                                                                    review === "Benz GLA" ? car7 :
+                                                                                        review === "Suzuki Baleno" ? car8 :
+                                                                                            review === "Jaguar F-Pace" ? car9 : ""
+                                                            }
+                                                            alt="Opening of new offices of the company"
+                                                            loading="lazy"
+                                                            className="w-100"
+                                                        />
+                                                    </a>
+                                                    <a href="#" className="btn card-badge">
+                                                        {Math.floor(Math.random() * (5 - 2 + 1)) + 2} Stars
+                                                    </a>
+                                                </figure>
+                                                <div className="card-content">
+                                                    <h3 className="h3 card-title">
+                                                        <a href="#">{randomReviews[index - 1]}</a>
+                                                    </h3>
+                                                    <div className="card-meta">
+                                                        <div className="publish-date">
+                                                            <i className="bi bi-calendar"></i>
+                                                            <time dateTime="2022-01-14">{randomDateString()}</time>
+                                                        </div>
+                                                        <div className="comments">
+                                                            <i className="bi bi-chat-dots"></i>
+                                                            <data value={114}>{Math.floor(Math.random() * (300 - 100 + 1)) + 2}</data>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
+                        </section>
+                    }
+
+                    <section className="section blog" >
+                        <div className="container">
+                            <h2 className="h2 section-title">My Rented Cars</h2>
+                            <ul className="blog-list has-scrollbar">
+                                {
+                                    car1stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car1}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">Toyota RAV4</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                                {
+                                    car2stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car2}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">BMW 3 Series</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                                {
+                                    car3stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car3}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">Volkswagen T-Cross</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                                {
+                                    car4stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car4}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">Cadillac Escalade</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                                {
+                                    car5stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car5}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">BMW 4 Series GTI</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                                {
+                                    car6stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car6}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">BMW 4 Series</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                                {
+                                    car7stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car7}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">Benz GLA</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                                {
+                                    car8stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car8}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">Suzuki Baleno</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                                {
+                                    car9stat === "verify" &&
+                                    <li>
+                                        <div className="blog-card">
+                                            <figure className="card-banner">
+                                                <a href="#">
+                                                    <img
+                                                        src={car9}
+                                                        alt="Opening of new offices of the company"
+                                                        loading="lazy"
+                                                        className="w-100"
+                                                    />
+                                                </a>
+                                                <a href="#" className="btn card-badge">
+                                                    Rented
+                                                </a>
+                                            </figure>
+                                            <div className="card-content">
+                                                <h3 className="h3 card-title">
+                                                    <a href="#">Jaguar F-Pace</a>
+                                                </h3>
+                                                <div className="card-meta">
+                                                    <div className="publish-date">
+                                                        <i class="bi bi-calendar"></i>
+                                                        <time dateTime="2022-01-14">January 12, 2024</time>
+                                                    </div>
+                                                    <div className="comments">
+                                                        <data value={114}>Return in 1 month</data>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+
+                            </ul>
                         </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    </section>
-}
+                    </section>
+
 
 
                 </article>
