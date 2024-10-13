@@ -48,7 +48,8 @@ const Signup = () => {
                 <div className="container">
                     <div className="overlay" data-overlay />
                     <a href="#" className="logo">
-                        <img src={logo} alt="Ridex logo" />
+                        {/* <img src={logo} alt="Ridex logo" /> */}
+                        <h2 className = "black">Travel Trove</h2>
                     </a>
                     <nav className="navbar" data-navbar>
                         <ul className="navbar-list">
@@ -56,7 +57,7 @@ const Signup = () => {
                                 <a href="#home" className="navbar-link" data-nav-link>Home</a>
                             </li>
                             <li>
-                                <a href="#featured-car" className="navbar-link" data-nav-link>Explore cars</a>
+                                <a href="#featured-car" className="navbar-link" data-nav-link>Explore guides</a>
                             </li>
                             <li>
                                 <a href="#footer" className="navbar-link" data-nav-link>About us</a>
@@ -72,7 +73,7 @@ const Signup = () => {
                             <span className="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
                         </div>
                         <a href="#featured-car" className="btn" aria-labelledby="aria-label-txt">
-                            <span id="aria-label-txt">Explore cars</span>
+                            <span id="aria-label-txt">Explore guides</span>
                         </a>
                         <a href="#" className="btn user-btn" aria-label="Profile">
                             <i class="bi bi-person-fill-gear"></i>
@@ -93,8 +94,8 @@ const Signup = () => {
                     <section className="section hero" id="home">
                         <div className="container">
                             <div className="hero-content">
-                                <h2 className="h1 hero-title">Login Authentication</h2>
-                                <p className="hero-text">Hello user. Login to continue !</p>
+                                <h2 className="h1 hero-title">Register Now</h2>
+                                <p className="hero-text">Hello user. Register now on traveltrove !</p>
                             </div>
                             <div className="hero-banner" />
                             <form action="" className="login-form">
@@ -139,14 +140,14 @@ const Signup = () => {
                                 </div>
                                 <div className="input-wrapper">
                                     <label htmlFor="input-2" className="input-label">
-                                        Aadhar
+                                        Contact Number
                                     </label>
                                     <input
                                         type="text"
                                         name="aadhar"
                                         id="input-2"
                                         className="input-field"
-                                        placeholder="Enter your aadhar number"
+                                        placeholder="Enter your contact number"
                                         onChange={(e) => setData({ ...data, aadhar: e.target.value })}
                                     />
                                 </div>

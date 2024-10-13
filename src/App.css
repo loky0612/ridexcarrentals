@@ -1004,7 +1004,7 @@ button, a { transition: var(--transition); }
 
   .hero-banner {
     display: block;
-    background: url("../src/images/hero-banner.jpg") no-repeat;
+    background: url("../src/images/login.jpg") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;
@@ -1229,4 +1229,8 @@ button, a { transition: var(--transition); }
 
   .footer-list:last-of-type { width: 33.33%; }
 
+}
+
+.black {
+  color: black;
 }

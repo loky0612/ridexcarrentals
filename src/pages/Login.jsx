@@ -50,7 +50,8 @@ const Login = () => {
                 <div className="container">
                     <div className="overlay" data-overlay />
                     <a href="#" className="logo">
-                        <img src={logo} alt="Ridex logo" />
+                        {/* <img src={logo} alt="Ridex logo" /> */}
+                        <h2 className = "black">Travel Trove</h2>
                     </a>
                     <nav className="navbar" data-navbar>
                         <ul className="navbar-list">
@@ -58,7 +59,7 @@ const Login = () => {
                                 <a href="#home" className="navbar-link" data-nav-link>Home</a>
                             </li>
                             <li>
-                                <a href="#featured-car" className="navbar-link" data-nav-link>Explore cars</a>
+                                <a href="#featured-car" className="navbar-link" data-nav-link>Explore guides</a>
                             </li>
                             <li>
                                 <a href="#footer" className="navbar-link" data-nav-link>About us</a>
@@ -74,7 +75,7 @@ const Login = () => {
                             <span className="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
                         </div>
                         <a href="#featured-car" className="btn" aria-labelledby="aria-label-txt">
-                            <span id="aria-label-txt">Explore cars</span>
+                            <span id="aria-label-txt">Explore guides</span>
                         </a>
                         <a href="#" className="btn user-btn" aria-label="Profile">
                             <i class="bi bi-person-fill-gear"></i>
